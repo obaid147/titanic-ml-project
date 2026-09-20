@@ -14,10 +14,13 @@ This project uses the classic Titanic dataset to predict whether a passenger sur
 
 ## Results
 
-   Model               Accuracy 
-| Logistic Regression | 0.81 |
-| Random Forest       | 0.80 |
-| Neural Network      | 0.82 |
+   Model                Single Split     5-Fold CV Mean 
+| Logistic Regression   | 0.81 |          | 0.79 |
+| Random Forest         | 0.80 |          | 0.81 |
+| Neural Network        | 0.82 |          |   —  |
+
+## Cross-Validation
+A single train/test split can be misleading on a small dataset, so 5-fold cross-validation was used to get a more reliable comparison between Logistic Regression and Random Forest. Results show Random Forest performs slightly better on average (0.81 vs 0.79), despite Logistic Regression scoring higher on the original single split, a good reminder that one split alone isn't enough to judge a model.
 
 ## Tech Stack
 - Python, Pandas, NumPy
